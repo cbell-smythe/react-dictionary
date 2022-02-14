@@ -1,3 +1,7 @@
 .Dictionary {
   color: blueviolet;
 }
+
+.Dictionary .Results {
+  color: black;
+}
