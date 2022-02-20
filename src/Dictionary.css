@@ -1,7 +1,23 @@
-.Dictionary {
-  color: blueviolet;
+Body {
+  background: #caedde;
 }
-
-.Dictionary .Results {
-  color: black;
+.Dictionary section {
+  color: #414a50;
+  background: #c2fae2;
+  padding: 30px;
+  border-radius: 7px;
+  box-shadow: 0 10px 10px rgb(0 0 0 /10%);
+  margin: 20px 0;
+}
+.Dictionary form {
+  margin: 40px 0;
+  text-align: center;
+}
+.Dictionary input {
+  width: 50%;
+  padding: 8px;
+  border-radius: 7px;
+}
+.Dictionary btn-light {
+  margin: 20px;
 }
