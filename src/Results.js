@@ -1,4 +1,6 @@
 import React from "react";
+import Photos from "./Photos";
+
 import Meaning from "./Meaning";
 import Phonetic from "./Phonetic";
 import "./Results.css";
@@ -26,6 +28,9 @@ export default function Results(props) {
                 </section>
               );
             })}
+          </div>
+          <div className="col-5">
+            <Photos />
           </div>
         </div>
       </div>
