@@ -9,7 +9,27 @@ export default function App() {
         <main>
           <Dictionary defaultKeyword="sunrise" />
         </main>
-        <footer>Coded by Chrystal Bell-Smythe</footer>
+        <footer>
+          This application was built by Chrystal Bell-Smythe and is{" "}
+          <a
+            href="https://github.com/cbell-smythe/react-dictionary"
+            target="_blank"
+            rel="noreferrer"
+            className="plain"
+          >
+            open-sourced on GitHub
+          </a>{" "}
+          and{" "}
+          <a
+            href="https://focused-hermann-8b3782.netlify.app/"
+            target="_blank"
+            rel="noreferrer"
+            className="plain"
+          >
+            hosted on Netlify
+          </a>
+          .
+        </footer>
       </div>
     </div>
   );

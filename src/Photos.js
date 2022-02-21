@@ -1,5 +1,5 @@
 import React from "react";
-import "./Photos";
+import "./Photos.css";
 
 export default function Photos(props) {
   if (props.photos) {
@@ -8,11 +8,11 @@ export default function Photos(props) {
         <div className="row">
           {props.photos.map(function (photo, index) {
             return (
-              <div className="col-2" key={index}>
+              <div className="col-6" key={index}>
                 <a href={photo.src.original} target="_blank" rel="noreferrer">
                   <img
                     src={photo.src.tiny}
-                    alt={photo[0].alt}
+                    alt={photo.alt}
                     className="img-fluid"
                   />
                 </a>

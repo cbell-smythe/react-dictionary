@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import Results from "./Results";
 import axios from "axios";
+import Results from "./Results";
+import Photos from "./Photos";
 import "./Dictionary.css";
 
 export default function Dictionary(props) {
@@ -14,7 +15,6 @@ export default function Dictionary(props) {
   }
 
   function handlePexelsResponse(response) {
-    console.log(response);
     setPhotos(response.data.photos);
   }
 
@@ -55,7 +55,14 @@ export default function Dictionary(props) {
           />
         </form>
         <hr />
-        <Results results={results} photos={photos} />
+        <div className="row">
+          <div className="col-7">
+            <Results results={results} />
+          </div>
+          <div className="col-5">
+            <Photos photos={photos} />
+          </div>
+        </div>
       </div>
     );
   } else {
