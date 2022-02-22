@@ -5,6 +5,7 @@ import "./Results.css";
 
 export default function Results(props) {
   if (props.results) {
+    console.log(props.results);
     return (
       <div className="Results">
         <section>
@@ -14,7 +15,21 @@ export default function Results(props) {
               {props.results.phonetics[1].text}
             </span>
           </span>
-          <Phonetic phonetic={props.results.phonetics[0]} />
+          {props.results.phonetics
+            .filter(function (phonetic) {
+              return phonetic.audio.length > 0;
+            })
+            .map(function (phonetic, index) {
+              if (index === 0) {
+                return (
+                  <div key={index}>
+                    <Phonetic phonetic={phonetic} />
+                  </div>
+                );
+              } else {
+                return null;
+              }
+            })}
         </section>
         {props.results.meanings.map(function (meaning, index) {
           return (
